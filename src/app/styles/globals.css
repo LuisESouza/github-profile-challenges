@@ -1,0 +1,124 @@
+@import "tailwindcss";
+:root {
+  --background: #1B2535;
+  --foreground: #ededed;
+  --profile-info-bg-color: #0F142A;
+  --button-bg-color: #0F142A;
+}
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1B2535;
+    --foreground: #ededed;
+  }
+}
+input {
+  padding: 10px 10px 10px 50px;
+}
+header {
+  height: 260px;
+  padding: 40px;
+  text-align: center;
+  display: block;
+  width: 100%;
+  background-color: rgb(0, 8, 8);
+  background-image: url("/images/hero-image-github-profile.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: end;
+}
+.line-v{
+  height: 100%;
+  border: 1px solid grey;
+}
+.container{
+  margin: auto;
+}
+*{
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.image-profile {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  border: 10px solid var(--background);
+  margin-top: -60px;
+}
+.image-profile img{
+  width: 100%;
+  height: 100%;
+}
+.Followers-info, .Following-info, .Location-info {
+  padding: 25px 25px;
+  width: max-content;
+}
+.user-cardInfo{
+  margin-left: 170px;
+}
+p{
+  color: #97A3B6;
+}
+@media (max-width: 1024px) {
+  section{
+    padding: 0px 55px 0px 55px;
+  }
+}
+@media (max-width: 768px) {
+  .user-cardInfo{
+    margin-left: 150px;
+  }
+  .user-info{
+    padding: 0px;
+  }
+  .image-profile {
+    width: 130px;
+    height: 130px;
+    border-radius: 10px;
+    border: 10px solid var(--background);
+    margin-top: -55px;
+  }
+  .Followers-info, .Following-info, .Location-info {
+    padding: 10px 10px;
+    font-size: 12.5px;
+    width: max-content;
+    height: 40px;
+  }
+  .repo-title{
+    font-size: 16px;
+  }
+  .repo-desc{
+    font-size: 13px;
+  }
+  .img-info{
+    font-size: .7rem;
+  }
+  .img-info img{
+    width: .8rem;
+  }
+}
+@media (max-width: 700px){
+  .user-cardInfo{
+    margin-left: 0px;
+    flex-direction: column;
+    margin-top: 70px;
+    gap: 0px;
+  }
+
+  .container-form{
+  }
+
+  input{
+    width: 260px;
+  }
+}
